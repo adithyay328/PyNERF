@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "cc28cf610472bfd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "a30da7be4099c2c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "249bef9dc4ef0651",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PaperNotes/NERF/NERF.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b0f02cfdf267ba69",
+    "type": "split",
+    "children": [
+      {
+        "id": "49c6e9c1697e383b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04586453649000b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8a38d3d692e6e0e1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "94c00de0ba5f08b6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2c0b171499d6118a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a747a7e18a3470bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d85d915139ee90c3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "PaperNotes/NERF/NERF.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3fc42dc7dd7a0c3a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "PaperNotes/NERF/NERF.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5bc3b82288527402",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "75bd1f25b563b934",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PaperNotes/NERF/NERF.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "249bef9dc4ef0651",
+  "lastOpenFiles": [
+    "PaperNotes/Paper Notes Homepage.md",
+    "Homepage.md",
+    "PaperNotes/NERF/NERF.md",
+    "PaperNotes/NERF",
+    "PaperNotes"
+  ]
+}

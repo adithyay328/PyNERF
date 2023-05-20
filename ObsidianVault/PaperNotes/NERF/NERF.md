@@ -1,0 +1,1 @@
+Here are notes on the **original** paper on NERFs. As such, it's quite an important paper to understand.
