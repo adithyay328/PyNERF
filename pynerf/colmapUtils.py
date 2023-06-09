@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 import numpy as np
 
-from cameraMatrix import Camera
+from pynerf.cameraMatrix import Camera
 from uid import UID
 
 class COLMAPCamera:
