@@ -44,6 +44,7 @@ class VanillaNeRFEncoder(nn.Module):
         super().__init__()
         self.N = N
     
+    #TODO vectorize this
     def forward(self, X : torch.Tensor):
         # We can easily compute the
         # inside of the sinusoids with
@@ -51,9 +52,31 @@ class VanillaNeRFEncoder(nn.Module):
         # and then follow up with some stacks
         # and reshapes to efficiently implement
         # this
+
+        # If X is not batched, add an outer dimension
+        if len(X.shape) == 1:
+            X = X.unsqueeze(0)
+
+        # Compute general linspaces for all dimensions
         linspaceTillN = torch.linspace(0, self.N - 1, self.N)
-        raised = 2 ** linspaceTillN
-        insideOfSinusoids = raised * math.pi * X
+        raisedWithPi = (2 ** linspaceTillN) * math.pi
+
+        # Now, multiply each element of each batch vector
+        # to get the encoding
+        encodingList = []
+
+        for batch in range( X.shape[0] ):
+            batchEncoding = []
+            for dim in range( X.shape[1] ):
+                batchEncoding.append(
+                    raisedWithPi * X[batch][dim]
+                )
+            
+            encodingList.append(
+                torch.hstack( batchEncoding )
+            )
+        
+        insideOfSinusoids = torch.vstack( encodingList )
 
         # Now, we need to apply sin and cos to all
         # of them, and then interleave those
@@ -61,9 +84,11 @@ class VanillaNeRFEncoder(nn.Module):
         sined = torch.sin(insideOfSinusoids)
         cosined = torch.cos(insideOfSinusoids)
 
-        # Now, we need to interleave them
-        # i.e. the first element is sined[0],
-        # second is cosined[0], third is sined[1],
-        # etc.
-        interleaved = torch.stack((sined, cosined)).T.flatten()
-        return interleaved
+        catted = torch.cat((sined, cosined), dim=-1)
+        return catted
+
+        # # Now, we need to interleave them
+        # # i.e. the first element is sined[0],
+        # # second is cosined[0], third is sined[1],
+        # # etc.
+        # interleaved = torch.stack((sined, cosined)).mT.flatten()
